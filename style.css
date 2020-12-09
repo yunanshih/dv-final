@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    display: flex;
+}
+
+.controls {
+    
+}
+
+.map {
+    width: 50vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.charts {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart {
+    width: 100%;
+    height: 50%;
+    border: 1px solid black;
+}
