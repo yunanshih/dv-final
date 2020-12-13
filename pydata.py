@@ -14,11 +14,11 @@ with open('./data/108A2.csv', newline='', encoding="utf-8-sig") as csvfilein:
   for row in rows:
     if len(row) < 2:
       continue
+    row[1] = row[1].replace(' ', '')
     row[1] = row[1].split('/')[0]
     row[1] = row[1].split('(')[0]
-    row[1] = row[1].split('與')[0]
     row[1] = row[1].split('、')[0]
-    parsed = row[1].split(' ')[0]
+    parsed = row[1].split('與')[0]
 
     if '路' in parsed and '段' in parsed:
       parsed = parsed.split('段')[0] + '段'
