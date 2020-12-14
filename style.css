@@ -25,3 +25,26 @@ body {
     height: 50%;
     border: 1px solid black;
 }
+
+rect {
+    fill: darkred;
+}
+
+.tick text {
+font-size: 14px;
+fill: dimgrey;
+}
+  
+.tick line {
+stroke: dimgrey;
+}
+  
+.axis-label {
+font-size: 14px;
+fill: dimgrey;
+}
+
+.title {
+font-size: 3.2em;
+fill: dimgrey;
+}

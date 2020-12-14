@@ -74,7 +74,7 @@
         .text(titleText);
   };
   
-  d3.csv('./A2/' + county_list[0] + '_A2.csv').then(data => {
+  d3.csv('./data/' + county_list[0] + '.csv').then(data => {
     console.log(data)
     data.forEach(d => {
         console.log(d.road)
@@ -86,7 +86,7 @@
   const changeSelection = () => {
     selected = document.getElementById("county").value;
     svg.selectAll("*").remove();
-    d3.csv('./A2/' + county_list[selected] + '_A2.csv').then(data => {
+    d3.csv('./data/' + county_list[selected] + '.csv').then(data => {
         console.log(data)
         data.forEach(d => {
             console.log(d.road)

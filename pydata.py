@@ -8,7 +8,7 @@ data = []
 for county in county_list:
   data.append([])
 
-with open('./data/108A2.csv', newline='', encoding="utf-8-sig") as csvfilein:
+with open('./data/108A2.csv', newline='', encoding="utf-8") as csvfilein:
   rows = csv.reader(csvfilein)
 
   for row in rows:
@@ -50,13 +50,8 @@ with open('./data/108A2.csv', newline='', encoding="utf-8-sig") as csvfilein:
         data[index].append(parsed)
 
 for index, county in enumerate(county_list):
-#   with open('./output/' + county + '_A2.csv', 'w', newline='', encoding="utf-8-sig") as csvfileout:
-#     writer = csv.writer(csvfileout)
-#     writer.writerow(['發生地點'])
-#     for d in data[index]:
-#       writer.writerow([d])
-
-  with open('./output/' + county + '_A2.csv', 'a', newline='', encoding="utf-8-sig") as csvfileout:
+  with open('./output/' + county + '.csv', 'a', newline='', encoding="utf-8") as csvfileout:
     writer = csv.writer(csvfileout)
+    # writer.writerow(['road'])
     for d in data[index]:
       writer.writerow([d])
